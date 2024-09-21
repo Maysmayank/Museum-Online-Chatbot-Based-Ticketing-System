@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+  <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+  <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+  
+  <df-messenger
+    project-id="scenic-comfort-434106-b3"
+    agent-id="545689e2-546e-43e2-8170-5c94a1e151d2"
+    language-code="en"
+    max-query-length="-1">
+    <df-messenger-chat-bubble
+     chat-title="Tixplore_Chatbot">
+    </df-messenger-chat-bubble>
+  </df-messenger>
+  
+  <style>
+    df-messenger {
+      z-index: 999;
+      position: fixed;
+      --df-messenger-font-color: #000;
+      --df-messenger-font-family: Roboto;
+      --df-messenger-chat-background: #FFFFFF;
+      --df-messenger-message-user-background: #DDDDDD;
+      --df-messenger-message-bot-background: #6c63ff;
+      bottom: 16px;
+      right: 16px;
+    }
+  </style>
+  <title>Vite + React</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
