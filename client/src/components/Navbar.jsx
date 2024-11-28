@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { User } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import HocConditionalRendering from "./HocConditionalRendering";
@@ -11,6 +11,7 @@ import {
 } from "../components/ui/popover"
 import Button from "./Button";
 import axios from "axios";
+import { useContractContext } from "@/lib/EtherContext";
  
 
 function Navbar() {
@@ -19,7 +20,9 @@ function Navbar() {
   const navigate = useNavigate();
   const location = useLocation(); // Get current route
   const [userPayload, setUserPayload] = useState(null);
+  const {walletSigner}=useContractContext();
 
+ 
   useEffect(() => {
     // Get the token from localStorage (or cookies if you use that)
     const token = localStorage.getItem('token'); // Or use cookies.get('token') if using cookies
@@ -91,7 +94,7 @@ function Navbar() {
       <div className="relative flex items-center w-full h-full justify-around z-10">
         <p className="navbar-text intro-title">TIXPLORE.</p>
 
-        <div className="w-[30%]">
+        <div className="w-[40%]  ">
           <ul className="nav-links hidden md:flex gap-5 w-full">
             <li>
               <NavLink
@@ -140,10 +143,66 @@ function Navbar() {
               >
                 Museums
               </NavLink>
+
+
+            </li>
+
+
+
+            <li>
+              <NavLink
+                to="/nft"
+                className={({ isActive }) =>
+                  `block rounded-sm font-semibold px-2 duration-200 transform transition-all ease-in-out 
+                   ${isActive
+                    ? "text-orange-400 bg-white -translate-y-1 scale-110"
+                    : "text-white"
+                  } 
+                   hover:bg-gray-200 hover:text-black hover:scale-110 hover:-translate-y-1`
+                }
+              >
+               NFTMarketPlace
+              </NavLink>
+
+              
+
+              
+            </li>
+
+            <li>
+              <NavLink
+                to="/sellnft"
+                className={({ isActive }) =>
+                  `block w-[120%] rounded-sm font-semibold px-2 duration-200 transform transition-all ease-in-out 
+                   ${isActive
+                    ? "text-orange-400 bg-white -translate-y-1 scale-110"
+                    : "text-white"
+                  } 
+                   hover:bg-gray-200 hover:text-black hover:scale-110 hover:-translate-y-1`
+                }
+              >
+               List Nft
+              </NavLink>
+
+              
+
+              
             </li>
           </ul>
         </div>
+        
 
+
+        <div className='flex flex-col items-center'>
+
+            <button className='text-xl rounded-md mb-2 p-2 max-w-[150px] bg-blue-900' >{walletSigner?"Connected":"Connect"}</button>
+            
+            <div>
+              {walletSigner&& walletSigner}
+            </div>
+     
+
+      </div>
         <div className="flex gap-3 items-center">
           {
             userPayload ? (
@@ -188,7 +247,7 @@ function Navbar() {
                   Sign-Up
                 </button>)
           }
-
+    
         </div>
       </div>
     </nav>
