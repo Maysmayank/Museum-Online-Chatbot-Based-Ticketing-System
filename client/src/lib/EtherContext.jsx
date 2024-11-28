@@ -4,7 +4,12 @@ import { ethers, formatUnits } from 'ethers';
 import { addWalletListener, connectWallet, getCurrentWalletConnected } from './interact';
 
 let abi = JSON.stringify(NFTMarketPlaceContract.abi);
-let CONTRACT_ADDRESS = "0x5e350647412401445BB7FC2547e228627CDf4ae2";
+// let CONTRACT_ADDRESS = "0x5e350647412401445BB7FC2547e228627CDf4ae2";
+
+
+// these keys are for testing purposes
+
+
 
 const ContractContext = createContext();
 // const privateKey = "d7275de770dce26a7b28bbc5f18dd9661b89a3ca9bde075f3888d3a6f2292989"; // deployed contract wallet pkey
