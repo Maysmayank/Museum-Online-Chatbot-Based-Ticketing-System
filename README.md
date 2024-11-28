@@ -1,4 +1,4 @@
-# Museum NFT Marketplace
+# Museum NFT Marketplace (TIXPLORE)
 
 ## Overview
 
