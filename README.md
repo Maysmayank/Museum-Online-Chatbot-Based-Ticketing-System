@@ -64,7 +64,7 @@ This application is a perfect blend of the arts, blockchain, and digital assets,
 
 
 ## Individual Nft Information
-![Screenshot 2024-11-28 214220](https://github.com/user-attachments/assets/78eed093-aa54-4b37-9bd8-2ff71f44c90a)
+![image](https://github.com/user-attachments/assets/d59b806f-b03d-4e06-ba26-180b16d5d972)
 
 
 
